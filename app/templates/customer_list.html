@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Customer list
+{% endblock %}
+
+{% block content %}
+    <h1 class="text-center mt-4">Catering Management System</h1>
+
+    <a class="btn btn-primary" href="{% url 'event_create' %}">Create New Event</a>
+
+    <div class="container row gap-3">
+        {% for customer in list %}
+
+            <h3>{{ customer.name }}</h3>
+            <p>{{ customer.email_id }}</p>
+            <p>{{ customer.contact_no }}</p>
+            <p>{{ customer.date_of_birth }}</p>
+            <p>{{ customer.address }}</p>
+            <p><strong>Favorite Cuisines:</strong></p>
+            <ul>
+                {% for cuisine in customer.favorite_cuisines.all %}
+                    <li>{{ cuisine.name }}</li>
+                {% empty %}
+                    <li>No cuisines selected</li>
+                {% endfor %}
+            </ul>
+            {% comment %} <a class="btn btn-primary" href="{% url 'customer_edit' event.id %}">Edit Event</a>
+        <a class="btn btn-danger" href="{% url 'customer_delete' event.id %}">Delete Event</a> {% endcomment %}
+        {% empty %}
+            <p>No customer available.</p>
+        {% endfor %}
+
+        
+        {% comment %} <a class="btn btn-danger" href="{% url 'event_delete' 1 %}">Delete Event</a> {% endcomment %}
+
+    </div>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block title%}
+    testing
+{% endblock%}
+
+{% block content%}
+    {% if form.instance.pk %}
+    Edit Form
+    {% else %}
+    Create form
+    {% endif %}
+
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Save</button>
+        <a class="btn btn-secondary" href="{% url 'event_list' %}">Cancel</a>
+    </form>
+{% endblock%}

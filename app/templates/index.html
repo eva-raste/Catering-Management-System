@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block title%}
+    testing
+{% endblock%}
+
+{% block content%}
+    <h1 class="text-center mt-4">Catering Management System</h1>
+    <a class="btn btn-success" href="{% url 'login' %}">Login</a>
+
+    <a class="btn btn-primary" href="{% url 'event_create' %}">Create New Event</a>
+
+{% endblock%}

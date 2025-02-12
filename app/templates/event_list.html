@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Testing
+{% endblock %}
+
+{% block content %}
+    <h1 class="text-center mt-4">Catering Management System</h1>
+
+    <a class="btn btn-primary" href="{% url 'event_create' %}">Create New Event</a>
+
+    <div class="container row gap-3">
+        {% for event in list %}
+
+            <h3>{{ event.name }}</h3>
+            <p>{{ event.id }}</p>
+            <p>{{ event.date }}</p>
+            <p>{{ event.time }}</p>
+            <p>{{ event.location }}</p>
+
+            <a class="btn btn-primary" href="{% url 'event_edit' event.id %}">Edit Event</a>
+        <a class="btn btn-danger" href="{% url 'event_delete' event.id %}">Delete Event</a>
+        {% empty %}
+            <p>No events available.</p>
+        {% endfor %}
+
+        
+        {% comment %} <a class="btn btn-danger" href="{% url 'event_delete' 1 %}">Delete Event</a> {% endcomment %}
+
+    </div>
+{% endblock %}
