@@ -5,6 +5,7 @@ from .models import Customer,Cuisine,Chef,Food_Item,Event
 
 class CustomerAdmin(admin.ModelAdmin):
     list_display = ('name', 'email_id', 'contact_no') 
+    filter_horizontal = ('favorite_cuisines',)
     #search_fields = ('name', 'email_id', 'contact_no')  
    # list_filter = ('favorite_cuisines',) 
 
