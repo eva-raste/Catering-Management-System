@@ -9,6 +9,10 @@
             Catering Management System
         {% endblock %}
     </title>
+    {% block head %}
+    
+{% endblock %}
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
@@ -33,7 +37,7 @@
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="about.html">About</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Menu</a>
@@ -50,9 +54,151 @@
     </nav>
 
     
-    <div class="container mt-4">
+    <div class="container-fluid">
         {% block content %}
         {% endblock %}
     </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+               
+                
+    
+                <!-- Support Section -->
+                <div class="col-md-3 footer-section">
+                    <h5>Support</h5>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">our cuisine</a></li>
+                        <li><a href="#">Refund & Return</a></li>
+                        <li><a href="#">Deliveries</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Information Section -->
+                <div class="col-md-3 footer-section">
+                    <h5>Information</h5>
+                    <ul>
+                        <li><a href="#">Our Menu</a></li>
+                        <li><a href="#">Staff</a></li>
+                        <li><a href="#">Help & FAQs</a></li>
+                        <li><a href="#">Events</a></li>
+                        <li><a href="#">Order & Return</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Contact Us Section -->
+                <div class="col-md-3 footer-section">
+                    <h5>Contact Us</h5>
+                    <p><i class="fas fa-map-marker-alt"></i> No: 58 A, East Madison Street, Baltimore, MD, USA 4508</p>
+                    <p><i class="fas fa-phone"></i> 0000 - 123456789</p>
+                    <p><i class="fas fa-envelope"></i> mail@example.com</p>
+                    <p><i class="fas fa-clock"></i> 9.30AM - 7.30PM</p>
+                </div>
+            </div>
+    
+            <!-- Social Media & App Download -->
+            <div class="row footer-bottom">
+                <div class="col-md-6 text-center">
+                    <h5>Connect with us</h5>
+                    <a href="#"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="col-md-6 text-center">
+                    <h5>Download our app</h5>
+                    <img src="appstore.png" alt="App Store">
+                    <img src="playstore.png" alt="Google Play">
+                </div>
+            </div>
+    
+            <!-- Copyright -->
+            <div class="text-center copyright">
+                <p>All Rights Reserved © 2025</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <style>
+        body{
+            background-color:white;
+        }
+        /* Footer Styling */
+.footer {
+    background: url('{% static 'images/footer.jpg' %}') no-repeat center center;
+    background-size: cover;
+    color: white;
+    padding: 50px 0;
+}
+
+.footer-section h5 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #bbb;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: white;
+}
+
+.footer-section p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.footer-bottom {
+    margin-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 20px;
+}
+
+.footer-bottom h5 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Social Media Icons */
+.footer-bottom a {
+    font-size: 18px;
+    color: white;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.footer-bottom a:hover {
+    color: #ddd;
+}
+
+/* App Download Images */
+.footer-bottom img {
+    width: 120px;
+    margin: 10px 5px;
+}
+
+/* Copyright */
+.copyright {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #bbb;
+}
+
+    </style>
 </body>
 </html>
