@@ -1,13 +1,505 @@
 {% extends "layout.html" %}
+{% load static %}
 
-{% block title%}
-    testing
-{% endblock%}
+{% block title %}
+    Testing
+{% endblock %}
 
-{% block content%}
-    <h1 class="text-center mt-4">Catering Management System</h1>
-    <a class="btn btn-success" href="{% url 'login' %}">Login</a>
+{% block head %}
+<link rel="stylesheet" href="{% static 'design/index.css' %}">
+  
+{% endblock %}
 
-    <a class="btn btn-primary" href="{% url 'event_create' %}">Create New Event</a>
+{% block content %}
+<div class="home-page">
+<div class="container-fluid p-0">
+    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+                <img src="{% static 'images/i1.jpeg' %}" class="d-block w-100" alt="Slide 1">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>First Slide</h5>
+                    <p>Some placeholder content for the first slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="{% static 'images/i2.jpeg' %}" class="d-block w-100" alt="Slide 2">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Second Slide</h5>
+                    <p>Some placeholder content for the second slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'images/i3.jpeg' %}" class="d-block w-100" alt="Slide 3">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Third Slide</h5>
+                    <p>Some placeholder content for the third slide.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
 
-{% endblock%}
+
+</div>
+<section class="cuisine-section">
+    <div class="container text-center">
+        <h2 class="section-title">International Cuisines</h2>
+        <p class="section-subtitle">Incredibly Tasty International Dish</p>
+        <div class="row align-items-center">
+            <!-- Left Column -->
+            <div class="col-md-4">
+                <div class="cuisine-item">
+                    <img src="{% static 'images/c1.jpeg' %}" alt="African Cuisine">
+                    <h4>African Cuisines</h4>
+                    <p>Alienum phaedrum torquatos nec eu, vis detraxit periculis ex.</p>
+                </div>
+                <div class="cuisine-item">
+                    <img src="{% static 'images/c2.jpeg' %}" alt="American Cuisine">
+                    <h4>American Cuisines</h4>
+                    <p>Ultrices neque ornare aenean euismod elementum nisi quis.</p>
+                </div>
+                <div class="cuisine-item">
+                    <img src="{% static 'images/c3.jpeg' %}" alt="Asian Cuisine">
+                    <h4>Asian Cuisines</h4>
+                    <p>Molestie ac feugiat sed lectus. Eget mi proin sed libero enim.</p>
+                </div>
+            </div>
+
+            <!-- Center Image -->
+            <div class="col-md-4">
+                <div class="cuisine-image">
+                    <img src="{% static 'images/c7.jpeg' %}" alt="International Dish">
+                </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="col-md-4">
+                <div class="cuisine-item">
+                    <img src="{% static 'images/c4.jpeg' %}" alt="European Cuisine">
+                    <h4>European Cuisines</h4>
+                    <p>Facilisis mauris sit amet massa vitae tortor condimentum.</p>
+                </div>
+                <div class="cuisine-item">
+                    <img src="{% static 'images/c5.jpeg' %}" alt="Oceanic Cuisine">
+                    <h4>Oceanic Cuisines</h4>
+                    <p>Cursus euismod quis viverra nibh cras pulvinar mattis nunc.</p>
+                </div>
+                <div class="cuisine-item">
+                    <img src="{% static 'images/c5.jpeg' %}" alt="Indian Cuisine">
+                    <h4>Indian Cuisines</h4>
+                    <p>Semper feugiat nibh sed pulvinar proin gravida hendrerit lectus.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="hero">
+    <div class="container text-center">
+        <p class="sub-heading">Enjoy Great Recipe</p>
+        <h1 class="heading"><span>Simple And</span> <span class="red-text">Delicious Food</span></h1>
+        <p class="discount-text">Flat 20% Discount</p>
+        <a href="#" class="btn btn-danger">SHOP NOW</a>
+    </div>
+</section>
+<section class="food-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Left Side Image -->
+            <div class="col-md-6">
+                <img src="{% static 'images/f1.jpeg' %}" class="img-fluid" alt="Food Image">
+            </div>
+            
+            <!-- Right Side Content -->
+            <div class="col-md-6">
+                <h2 class="section-title">About us</h2>
+                
+                <div class="feature">
+                    
+                        <h5 class="hadding">title</h5>
+                        <p>Vestibulum morbi blandit cursus risus at ultrices mi. Facilisis gravida neque convallis.
+                            Vestibulum morbi blandit cursus risus at ultrices mi. Facilisis gravida neque convallis.
+                            Vestibulum morbi blandit cursus risus at ultrices mi. Facilisis gravida neque convallis.
+                            Vestibulum morbi blandit cursus risus at ultrices mi. Facilisis gravida neque convallis.
+                            Vestibulum morbi blandit cursus risus at ultrices mi. Facilisis gravida neque convallis.
+                            Vestibulum morbi blandit cursus risus at ultrices mi. Facilisis gravida neque convallis.
+                        </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="card-section py-5">
+    <div class="container">
+        <div class="row">
+            <!-- Wedding Card -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="{% static 'images/wedding-Catering.jpg' %}" class="card-img-top" alt="Wedding">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold">WEDDINGS</h5>
+                        <p class="card-text">Make your special day a perfect reflection of you.</p>
+                        <a href="#" class="btn btn-dark">LEARN MORE</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Social Card -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="{% static 'images/social.jpg' %}" class="card-img-top" alt="Social">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold">SOCIAL</h5>
+                        <p class="card-text">Turn life's special moments and occasions into celebrations.</p>
+                        <a href="#" class="btn btn-dark">LEARN MORE</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Corporate Card -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="{% static 'images/corparate.jpg' %}" class="card-img-top" alt="Corporate">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold">CORPORATE</h5>
+                        <p class="card-text">Amp up your business meetings, receptions, and holiday parties.</p>
+                        <a href="#" class="btn btn-dark">LEARN MORE</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<style>
+    /* Remove default margin and padding */
+html, body {
+    margin: 0;
+    
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Ensure the main container has no extra padding */
+.container-fluid {
+    
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100vw;
+}
+
+/* Make the carousel take full width */
+.carousel {
+    
+
+    width: 100vw;
+}
+
+/* Make carousel images cover the entire screen */
+.carousel-item img {
+    width: 100vw;  /* Full viewport width */
+    height: 90vh; /* Full viewport height */
+    object-fit: cover; /* Ensures image covers the whole area */
+}
+
+/* Adjust carousel control buttons */
+.carousel-control-prev, .carousel-control-next {
+    width: 5%;
+}
+
+/* Adjust carousel indicators (optional) */
+.carousel-indicators button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: white;
+    opacity: 0.5;
+}
+
+.carousel-indicators .active {
+    opacity: 1;
+    background-color: #000;
+}
+
+/* Ensure the page container fills the screen */
+.home-page {
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Section Styles */
+.cuisine-section {
+    padding: 50px 0;
+    text-align: center;
+}
+
+/* Titles */
+.section-title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Cuisine Items */
+.cuisine-item {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.cuisine-item img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+    border-radius:50%;
+}
+
+.cuisine-item h4 {
+    font-size: 18px;
+    font-weight: bold;
+    color:  #ff3b3b;
+}
+
+.cuisine-item p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Center Food Image */
+.cuisine-image img {
+    width: 300px;
+    height:300px ;
+    border-radius: 50%;
+    
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .cuisine-image img {
+        width: 250px;
+    }
+}
+/* Testimonial Section */
+/* Food Section Styling */
+/* Food Section Styling */
+.food-section {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.section-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 30px;
+}
+
+/* Feature Section */
+.feature {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  
+    padding: 20px;
+    border-radius: 10px;
+   
+    margin-bottom: 20px;
+}
+
+/* Heading */
+.hadding {
+    font-size: 24px;
+    font-weight: 600;
+    color: #d90429;
+    margin-bottom: 10px;
+}
+
+/* Text */
+.feature p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Responsive Image */
+.img-fluid {
+    border-radius: 50%;
+    max-width: 70%;
+    height: 400px;
+   
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .food-section .row {
+        flex-direction: column;
+        text-align: center;
+    }
+    .feature {
+        align-items: center;
+        text-align: center;
+    }
+}
+
+/* Card Section Styling */
+.card-section {
+    background-color: #f9f9f9;
+}
+
+/* Card Styling */
+.card {
+    height:auto;
+    border: none;
+    box-shadow: 0 4px 8px rgba(248, 217, 217, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+.card-body
+{
+   
+    background-color:rgb(254, 254, 254);
+
+}
+.card-title
+{
+    color:rgb(51, 49, 49);
+}
+.card-text
+{
+    height:40px;
+    color:rgb(76, 75, 75);
+}
+/* Image Styling */
+.card-img-top {
+    height: 250px;
+    object-fit: cover;
+}
+
+/* Button Styling */
+.btn-dark {
+    background-color:rgb(254, 254, 254);
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    color:black;
+    transition: 0.3s;
+}
+
+.btn-dark:hover {
+    background-color: #ff3b3b;
+}
+
+
+/* Hero Section Styling */
+.hero {
+    background: url('{% static 'images/f1.jpeg' %}') no-repeat center center/cover;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: black;
+    position: relative;
+}
+
+/* Dark Overlay (Optional) */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.6);
+}
+
+/* Text Styling */
+.hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.sub-heading {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.heading {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.red-text {
+    color:  #ff3b3b;;
+}
+
+.discount-text {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+/* Button Styling */
+.btn-danger {
+    padding: 12px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: #ff3b3b;;
+    border: none;
+    transition: 0.3s;
+}
+
+.btn-danger:hover {
+    background-color: darkred;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .heading {
+        font-size: 32px;
+    }
+
+    .discount-text {
+        font-size: 16px;
+    }
+}
+
+
+</style>
+
+{% endblock %}  
